@@ -2,3 +2,5 @@ env
 django_project/__pycache__
 blogApp/__pycache__
 blogApp/migrations/__pycache__
+django_project/settings.py
+

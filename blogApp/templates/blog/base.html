@@ -76,8 +76,16 @@
           </div>
         </div>
       </nav>
+      {%  if messages %}
+        {% for message in messages %}
+          <div class="notification">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
       {% block content %} 
       {% endblock content %}
 </body>
-<script src="/blogApp/static/js/navbar.js"></script>
-</html>
+<!--<script src="/blogApp/static/js/navbar.js"></script>
+-->
+  </html>
