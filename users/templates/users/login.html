@@ -5,16 +5,16 @@
         <div class="container ">
             <div class="column ">
                 <form method="POST">
-                    <h1 class="title">Register</h1>
+                    <h1 class="title">Login</h1>
                     {% csrf_token %}
                     <div class="box"> 
                         {{ form|crispy }}
                         <br>
                         <div class="control">
-                            <button class="button is-primary">Sign up</button>
+                            <button class="button is-primary">Login</button>
                         </div>
                         <hr>
-                        <h2 class="subtitle">Got an account already?<a href="{% url 'login' %}">Sign in</a></h2>
+                        <h2 class="subtitle">Need an account?<a href="{% url 'register' %}">Sign up</a></h2>
                         
                     </div>    
                     
