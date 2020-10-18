@@ -5,6 +5,10 @@
         <div class="container ">
             <div class="column ">
                 <h1>{{ user.username }}</h1>
+                <figure class="image image is-64x64">
+                    <img class="is-rounded" src="{{ user.profile.image.url }}">
+                </figure>
+                <h1>{{ user.email }}</h1>
             </div>
         </div>
     </section>
