@@ -8,6 +8,9 @@
                 Blog Website <strong>Padho harami</strong>, like the one you're currently reading
                 </h2>
                     {% for post in posts %}
+                        <figure class="image is-32x32 has-text-centered">
+                            <img class="is-rounded" src="{{ post.author.profile.image.url }}">
+                        </figure>
                         <h1>
                             <strong>{{post.title}} </strong> 
 
