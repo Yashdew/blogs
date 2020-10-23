@@ -12,7 +12,7 @@
                             <img class="is-rounded" src="{{ post.author.profile.image.url }}">
                         </figure>
                         <h1>
-                            <strong>{{post.title}} </strong> 
+                            <a href="{% url 'post-detail' post.id%}"> {{post.title}} </a> 
 
                         </h1>                    
                         <p>{{post.author}}  on {{post.date_posted|date:"F d, Y"}}</p>

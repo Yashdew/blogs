@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     
-    'blogApp.apps.BlogappConfig',
+    'blog.apps.BlogappConfig',
     'users.apps.UsersConfig', 
     'crispy_forms',
     'django_crispy_bulma',
