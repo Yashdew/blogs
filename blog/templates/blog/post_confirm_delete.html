@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <section>
+        <div class="container ">
+            <div class="column ">
+                <form method="POST">
+                    <h1 class="title">Delete Post</h1>
+                    <h2 class="subtitle">Are you sure you want to Delete "{{ object.title }}</h2>
+                    {% csrf_token %}
+                    <div class="box"> 
+                        
+                        <br>
+                        <div class="control">
+                            <button class="button is-danger">Yes, Delete</button>
+                            <button class="button is-primary"><a href="{% url 'post-detail' object.id %}" >Cancel</a></button>
+                        </div>
+                        <hr>
+                        
+                        
+                    </div>    
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+      
+     

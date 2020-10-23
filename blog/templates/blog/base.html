@@ -65,6 +65,9 @@
               </div>-->
               <div class="buttons">
                 {% if user.is_authenticated %}
+                  <a class="button is-light" href="{% url 'post-create' %}">
+                    New Post
+                  </a>
                   <a class="button is-light" href="{% url 'profile' %}">
                     Profile
                   </a>
