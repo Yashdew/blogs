@@ -1,7 +1,8 @@
 env
 django_project/__pycache__
-blogApp/__pycache__
+blog/__pycache__
 users/__pycache__
-blogApp/migrations/__pycache__
+blog/migrations/__pycache__
 django_project/settings.py
-
+django_project/myEnvVal.py
+mydatabase/
