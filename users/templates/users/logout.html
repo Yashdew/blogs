@@ -1,12 +1,19 @@
 {% extends "blog/base.html" %}
 <!--{% load crispy_forms_tags %}-->
 {% block content %}
-    <h2  class="subtitle has-text-centered">You have been Logged out</h2>
+        <section class="hero  is-large">
+            <div class="hero-body">
+            <div class="container">
+                <h2 class="title has-text-centered is-2">You have been Logged out</h2>
+                <h2 class="title has-text-centered"><a href="{% url 'login' %}">Login</a></h2>
+            </div>
+            </div>
+        </section>
     <section class="is-vcentered">
         <div class="container ">
             <div class="column ">
                 
-                <h2 class="subtitle has-text-centered"><a href="{% url 'login' %}">Login</a></h2>
+                
             </div>
         </div>
     </section>

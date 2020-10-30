@@ -1,0 +1,25 @@
+.has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    justify-content: center;
+}
+.imgyash1{
+    height: 256px;
+    width: 256px;
+    border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fix-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        overflow:hidden;
+    }
+
+  

@@ -2,26 +2,43 @@
 {% block content %}
     <section class="section">
         <div class="container ">
-            <div class="column has-text-centered">
-                <h1 class="title">AA gaye frands</h1>
-                <h2 class="subtitle">
-                Blog Website <strong>Padho harami</strong>, like the one you're currently reading
-                </h2>
-                    
-                        <figure class="image is-32x32 has-text-centered">
-                            <img class="is-rounded" src="{{ object.author.profile.image.url }}">
-                        </figure>
-                        <h1>
-                            <strong>{{object.title}} </strong> 
-                        </h1>  
-                        {% if object.author == user %}
-                            <a class="button is-primary" href="{% url 'post-update' object.id %}">Update</a> 
-                            <a class="button is-danger" href="{% url 'post-delete' object.id %}">Delete</a>  
-                        {% endif %}                
-                        <p>{{object.author}}  on {{object.date_posted|date:"F d, Y"}}</p>
-                        <p>{{object.content}}</p>
-                        <br>
-                
+            <div class="columns has-text-centered is-centered ">
+                <div class="column is-8 ">
+                    <div class="card article ">
+
+                        <div class="card-content">
+                            <div class="is-flex center">
+                                <figure class="image is-64x64 ">
+                                    <img class="is-rounded" src="{{ post.author.profile.image.url }}">
+                                </figure>
+                            </div>
+                            <div class="media">
+                                
+                                <div class="media-content has-text-centered">
+                                    <p class="title article-title">  
+                                        <a href="{% url 'post-detail' post.id%}"> {{post.title}} </a>  
+                                    </p>
+                                    <p class="subtitle is-6 article-subtitle">
+                                        <a href="#">@{{post.author}}</a> on {{post.date_posted|date:"F d, Y"}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content article-body">
+                                <p>
+                                    {{post.content}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            {% if object.author == user %}
+                                <a class="button is-primary" href="{% url 'post-update' object.id %}">Update</a> 
+                                <a class="button is-danger" href="{% url 'post-delete' object.id %}">Delete</a>  
+                            {% endif %}  
+                        </div>
+                        
+                        
+                    </div>
+                </div>
             </div>  
         </div>
     </section>
