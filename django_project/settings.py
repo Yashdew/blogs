@@ -17,17 +17,17 @@ from . import myEnvVal
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+myEnvVal.setVar()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-r4drm@wth=dlxh!bjzl^^*2+g%yl)9#q@twx)6)y$22=zjjpm'
-
+#SECRET_KEY = '-r4drm@wth=dlxh!bjzl^^*2+g%yl)9#q@twx)6)y$22=zjjpm'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ydblog.herokuapp.com/']
 
 
 # Application definition
@@ -137,7 +137,7 @@ LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
 
-myEnvVal.setVar()
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
