@@ -26,7 +26,8 @@ myEnvVal.setVar()
 #SECRET_KEY = '-r4drm@wth=dlxh!bjzl^^*2+g%yl)9#q@twx)6)y$22=zjjpm'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+
+DEBUG = (os.environ.get('DEBUG_VALUE'))
 
 ALLOWED_HOSTS = ['ydblog.herokuapp.com/']
 
